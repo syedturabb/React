@@ -1,10 +1,18 @@
-function button(props) {
-    
-    return (
-        <div>
+import { useState } from "react";
+function button() {
 
-            <button onClick={props.handleClick}>Click Me!</button>
-        </div>
+      const [count, setCount] = useState(0); // state
+     
+
+    return (
+            <div>
+      <h1>Count: {count}</h1>
+      <button onClick={() => setCount(count + 1)}>
+        Click to increment
+      </button>
+    </div>
+
+       
     );
 }
 
