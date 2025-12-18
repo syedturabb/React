@@ -3,7 +3,6 @@ function button() {
 
       const [count, setCount] = useState(0); // state
      
-
     return (
             <div>
       <h1>Count: {count}</h1>
