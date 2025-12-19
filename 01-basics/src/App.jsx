@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import axios from 'axios';
-import {Profile,Gallery} from './Gallery';
+import {Profile,Gallery,Login,Map} from './Gallery';
 // const App = () => {
   
   // const [username,setUsername] = useState('')
@@ -83,18 +83,30 @@ import {Profile,Gallery} from './Gallery';
 //      </div>
 //    )
 //  }
-
+   
  function App() {
+                   
   return (
-    <section>
+    <>
+
+       
+      {/* <Login name="turab"
+      array = {{name:"haider", id:123}}
+      /> */}
+
+      <Map />
       
-      <Gallery />
-      <h1>Amazing scientists</h1>
       {/* <Gallery /> */}
-      <Profile />
+      {/* <h1>Amazing scientists</h1> */}
+      {/* <Gallery /> */}
+      {/* <Profile /> */}
 
       {/* <Gallery /> */}
-    </section>
+      
+
+    
+</>
+     
   );
 }
 
