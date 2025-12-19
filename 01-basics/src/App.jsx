@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import axios from 'axios';
-const App = () => {
+import {Profile,Gallery} from './Gallery';
+// const App = () => {
   
   // const [username,setUsername] = useState('')
   // const submitHandler= (e)=>{
@@ -36,36 +37,65 @@ const App = () => {
         
       // }
 
-      const [data, setData] = useState([]);
-      const getData = async () => {
-        const response = await axios.get('https://picsum.photos/v2/list');
+//       const [data, setData] = useState([]);
+//       const getData = async () => {
+//         const response = await axios.get('https://picsum.photos/v2/list');
 
-        setData(response.data);
-        console.log(data[1].dowload_url);
+//         setData(response.data);
+//         console.log(data[1].dowload_url);
         
-      }
+//       }
           
 
        
-        return (
-    <div>
-        <div className='p-10 text-white'> 
-        <button onClick={getData} className='bg-teal-700 text-white font-semibold text-2xl px-6 py-3'>Click</button>
-        <div className='p-5 mt-5 bg-gray-950'>
-            {
-              data.map(function(elm,idx){
-                return <div key={idx} className='bg-gray-300 text-black flex items-center justify-between w-full px-7 py-6'>
-                      <img className='h-40' src={elm.dowload_url} alt=""></img>
-                      <h1>{elm.author}</h1>
+//         return (
+//     <div>
+//         <div className='p-10 text-white'> 
+//         <button onClick={getData} className='bg-teal-700 text-white font-semibold text-2xl px-6 py-3'>Click</button>
+//         <div className='p-5 mt-5 bg-gray-950'>
+//             {
+//               data.map(function(elm,idx){
+//                 return <div key={idx} className='bg-gray-300 text-black flex items-center justify-between w-full px-7 py-6'>
+//                       <img className='h-40' src={elm.dowload_url} alt=""></img>
+//                       <h1>{elm.author}</h1>
                           
-                </div>
+//                 </div>
                 
 
-              })
-            }  
-      </div>
-</div>
-</div>
-  )
+//               })
+//             }  
+//       </div>
+// </div>
+// </div>
+//   )
+// }
+
+
+
+//  function App() {
+//                    const [count, setCOunt] = useState(0);
+//    return (
+//      <div>
+//             <div>
+//               <h1 className='text-black'>Count: {count}</h1>
+//               <button className=' text-black bg-amber-400 px-6 py-3 text-2xl font-semibold' onClick={() => setCOunt(count+1)}> Click!</button>
+//               </div>      
+//      </div>
+//    )
+//  }
+
+ function App() {
+  return (
+    <section>
+      
+      <Gallery />
+      <h1>Amazing scientists</h1>
+      {/* <Gallery /> */}
+      <Profile />
+
+      {/* <Gallery /> */}
+    </section>
+  );
 }
+
 export default App
